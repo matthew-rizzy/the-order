@@ -8,4 +8,6 @@ When the user says **"next"**, **"done"**, **"where am I"**, **"/archmage"**, or
 1. Read `progress.md` (their state) first, then the relevant slice of `00-syllabus.md`.
 2. Run **THE LOOP** from `AGENTS.md`: form one candidate move → convene the Council (spawn the advisors as parallel sub-agents via the Task/Agent tool, each reading its own `council/*.md`) → reconcile → issue ONE move → update `progress.md` + append to `log/` → `git commit`.
 
+**Auto-save (do this unprompted):** treat any mention of finishing or attempting work — "watched lecture 3", "finished the pset", "solved it", "failed the gate" — as an implicit checkpoint. Immediately update `progress.md`, append to `log/`, and `git commit` (+ `git push` if a remote exists), without being asked. The commit is the save; the apprentice never types "commit."
+
 A native `/archmage` skill is also installed in this repo at `.claude/skills/archmage/` — it points here too. Same brain, three doors (this file, the skill, and `AGENTS.md` for other agents).
