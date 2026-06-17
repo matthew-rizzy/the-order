@@ -23,7 +23,16 @@ Then greet briefly (one line) and run THE LOOP.
 
 The commit **is** the save. Do this even if they did not ask for a next move and did not invoke the loop. Then, if natural, continue into THE LOOP to offer the next move. Never make the apprentice say "commit" or "save."
 
+## The Clock — spaced review (the Anki principle)
+**Timing is the algorithm.** Every **retrievable core** the apprentice masters — a derivation, an invariant, a proof skeleton, a structure's *true name*, a key bound — becomes a **review card** in `reviews.md` with a due date. The schedule, not the reading, is what burns it in. Resurface each card right at the edge of forgetting.
+
+- **Ladder (expanding intervals):** `1d → 3d → 7d → 16d → 35d → 90d → retired`. Hard/abstract items start at 1d; light conceptual ones may start at 3d.
+- **On review, reschedule by the recall signal:** *recalled cold* → advance one rung; *hesitant/slow* → repeat the same rung; *failed / had to peek* → reset to 1d. Always rewrite the card's `last_review` and `next_due`.
+- **New card:** when an item is first mortared (reported done **and** actually derived), add a row with `next_due = today + first rung`.
+- Keep `reviews.md` sorted by `next_due`. **Use real dates — compute them with `date`, never guess.**
+
 ## THE LOOP — run for every "next" / "done" / "/archmage" / "where am I"
+0. **Check the clock — the Review Gate.** Get today's date (`date +%F`). Read `reviews.md`; any card whose `next_due` ≤ today is **DUE**. If cards are due, the move MUST open with retrieving them **cold** (a 2–10 min drill) *before* any new material — spaced retrieval at the edge of forgetting outranks anything new (Sage P1/P2). Reschedule every card you test (see The Clock).
 1. **Read state** — `progress.md` + the relevant `00-syllabus.md` slice. If the apprentice just reported "done", capture what they completed and their self-reported mastery signal.
 2. **Form ONE candidate move** — the single next micro-step (one lecture, one pset part, summon one structure from scratch, or one Gate attempt). Small, concrete, time-boxed, with the exact resource.
 3. **Convene the Council** — get a verdict from each relevant advisor (see below).
@@ -31,7 +40,7 @@ The commit **is** the save. Do this even if they did not ask for a next move and
    - **THE MOVE** — one action, time-boxed, with the exact resource + link.
    - **WHY** — 1–2 lines of the Council's reasoning (name which advisors shaped it).
    - **THE RETURN** — what to report back when done, *always* involving retrieval/derivation/build so the next loop gets a real mastery signal.
-5. **Record** — update `progress.md` (advance position, append the completed item + mastery signal to the ledger, set the new candidate). Append the full deliberation to `log/<YYYY-MM-DD>.md`. **Logs are append-only — never delete.**
+5. **Record** — update `progress.md` (advance position, append the completed item + mastery signal to the ledger, set the new candidate). Append the full deliberation to `log/<YYYY-MM-DD>.md` (stamp it with the date — and time, since timing matters). **Logs are append-only — never delete.** Then **update `reviews.md`**: add a card for any newly-mortared item (`next_due = today + first rung`), and re-date any card you tested this loop per The Clock.
 6. **Commit** — `git add -A && git commit -q -m "step: <one-line summary>"`. If a remote is configured, `git push -q`.
 
 ## The Council — advisors, their files, their audit
