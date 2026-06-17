@@ -1,0 +1,232 @@
+Below is the playbook. It is self-contained and ready to feed into a tracked study plan.
+
+---
+
+# How To Learn Algorithms & Data Structures at a Scientist Level
+
+A playbook grounded in cognitive science, expertise research, and the primary-source regimens of the people who actually reached the top. Every claim is cited inline.
+
+---
+
+## 1. Core Operating Principles
+
+The 5–7 highest-leverage methods, ordered by evidence strength. The overarching rule first: **distrust fluency.** The methods that feel hardest (retrieval, spacing, interleaving) are the ones that work, and learners reliably misjudge this — they prefer the *worst* techniques even after data proves them wrong (Bjork's "desirable difficulties"; *Make It Stick*, Brown/Roediger/McDaniel 2014).
+
+### P1 — Retrieve, don't re-read (the testing effect)
+**Why:** Actively recalling from a blank page builds far more durable memory than re-reading, because each retrieval is a reconsolidation event that strengthens the trace and updates its cues. Karpicke & Roediger 2008 (*Science* 319:966–968): repeated-testing group recalled ~80% of English–Swahili pairs at one week vs ~33–36% for the repeated-study group — and re-studying already-known items added nothing. The crossover (re-readers win at 5 min, testers win at 1 week) is the defining signature (Roediger & Karpicke 2006).
+**How:** After reading any algorithm (Dijkstra, red-black insert), close the book and reproduce the **pseudocode + loop invariant** on a blank page; only then check. For proofs, reproduce the **skeleton** (induction? contradiction? exchange argument?) before re-reading. Drop items the moment you can recall them — spend effort only on misses.
+
+### P2 — Space it (distributed practice)
+**Why:** Identical total time yields dramatically more retention when split across separated sessions. Forgetting between sessions lowers retrieval strength, so the next retrieval is harder, which builds *storage* strength — the durable component (Bjork & Bjork's New Theory of Disuse). Cepeda et al. 2006 (*Psych. Bulletin*): spacing beat massing in **259 of 271** comparisons; optimal gap ≈ 10–20% of your target retention interval.
+**How:** Never cram a topic in one sitting. Implement quicksort today, re-derive its average-case recurrence in 3 days, again in a week. For an exam/interview N weeks out, set first review gaps to ~0.1–0.2·N and expand the ladder: **1 day → 3 days → 1 week → 3 weeks.** Use Anki for definitions/bounds/proof strategies, but make cards *generative*.
+
+### P3 — Interleave (mixed practice)
+**Why:** Mixing problem types (ABCABC) beats blocking (AAABBBCCC) because it forces you to first *discriminate which technique applies* — the actual skill exams and engineering demand — and it bakes in spacing. Rohrer & Taylor 2007: interleaved group vastly outperformed blocked on a 1-week delayed test despite identical practice. Kornell & Bjork 2008: same result for inductive category learning, even though most participants *wrongly* believed blocking helped more.
+**How:** Don't grind 30 BFS then 30 DP. Build **mixed, unlabeled** sets that force you to identify the technique (two-pointer vs DP vs graph vs greedy). For proofs, interleave *strategies* (induction, pigeonhole, contradiction, construction) so you practice choosing. Expect it to feel slower — your gut will lie that blocking is better.
+
+### P4 — Generate before being told (the generation effect)
+**Why:** Information you generate yourself is remembered better than identical information you read. Slamecka & Graf 1978: words generated from a rule+fragment beat words merely read. Even a *failed* attempt primes encoding of the eventual solution (pretesting / productive failure; Kapur). Mechanism: generating activates more semantic and cue–target connections at encoding.
+**How:** Before reading a proof, spend **10–15 min trying to prove it yourself.** Before reading how a structure works, predict it ("how would I support O(log n) insert *and* O(1) min?" → then read about the heap). Derive complexity bounds yourself. Produce-then-correct is the engine; passively reading a correct solution is the weakest mode.
+
+### P5 — Self-explain / elaborate (the "why" engine)
+**Why:** Explaining *why* a step is valid and connecting new material to prior knowledge multiplies retrieval routes. In Dunlosky et al. 2013's review of 10 techniques, only **practice testing and distributed practice rated HIGH**; self-explanation and elaborative interrogation rated MODERATE; summarization, highlighting, keyword mnemonics, imagery, and **re-reading rated LOW**. ("Learning styles" have no empirical support.)
+**How:** Use the **Feynman technique**: explain an algorithm/proof aloud in plain language — stumbles are gaps. For each proof step ask "why is THIS step valid *and necessary*?" Connect new structures to known ones ("a trie is a tree where the path spells the key"). Stop highlighting and re-reading — both feel productive and are rated LOW.
+
+### P6 — Dual-code (verbal + coherent visual)
+**Why:** Verbal and visual information run in partially independent channels, giving complementary retrieval routes (Paivio). But Mayer's coherence principle makes it conditional: visuals help **only** when meaning-bearing, aligned with the words, and non-redundant — clutter causes overload.
+**How:** Algorithms are inherently spatial — exploit it. Draw the **recursion tree** for mergesort with work-per-level annotated; sketch **pointer surgery** for AVL rotation; trace traversals by marking the visited frontier. For proofs, draw the structure (the DAG for topological sort, the bipartite graph for Hall's theorem, the number line for ε-δ). Pair each figure with the verbal invariant; keep it clean.
+
+### P7 — Manage the cognitive process (focus/diffuse + chunking)
+**Why:** The brain alternates between **focused** mode (concentrated work on familiar patterns) and **diffuse** mode (relaxed default-network state making novel connections); you can't be in both at once (Oakley, *A Mind for Numbers*; Oakley & Sejnowski's *Learning How to Learn*). Hard insight problems often need a break so diffuse mode breaks the **Einstellung** fixation (a first wrong idea blocking a better one). **Chunking** collapses a practiced concept into one unit, freeing working memory.
+**How:** Work hard in focused mode first, then *deliberately stop* (walk, sleep, shower) when stuck — solutions often arrive after the break. Build chunks by **re-implementing classics from scratch** until the method runs as one fluent unit. Beat procrastination with Pomodoros by focusing on *process* (25 min) not product.
+
+---
+
+## 2. The Daily / Weekly System
+
+A concrete, copyable routine synthesizing deep-work scheduling (Newport), Ericsson's ~90-min bouts, SRS (Nielsen/Matuschak/Skycak), and upsolving.
+
+### Daily
+- **Morning (peak focus): two ~90-min deep blocks**, time-blocked the night before, phone in another room (Ericsson found elite practice happens in ≤90-min morning intervals; Newport ritualizes deep work).
+  - *Block 1* = learn ONE hard new topic.
+  - *Block 2* = **upsolve** a problem from scratch — re-derive the approach, then re-implement on a blank file.
+- **Midday:** 20–30 min Anki review of your **single big deck**; then a **20–30 min nap** (NASA: a 26-min nap raised performance ~34%; top violinists napped daily — Walker, *Why We Sleep*).
+- **Afternoon "task block":** one **interleaved** mixed set (3–5 problems across *different* archetypes, not 10 of a kind); write/update evergreen notes for any new concept (claim-titled, linked).
+- **End of day (~5:30, shutdown ritual):** update the **error log**, commit a dated entry to your public learning-log repo, plan tomorrow's first block (Newport's shutdown).
+- **Before sleep:** light re-read of the day's hardest idea, then **8+ hours** — "practice, followed by a night of sleep, leads to perfection" (Walker). Sleep-deprived subjects show a ~40% deficit in forming new memories.
+
+### Weekly
+- **2–3 timed contests/problem sessions; UPSOLVE every unsolved problem within the week.**
+- **One "review & connect" session:** re-solve flagged error-log problems whose re-solve date is due; merge new Anki cards into clusters (kill orphans); link new notes to old.
+- **One accountability checkpoint:** post the week's log to a study group/partner; compare approaches with stronger peers.
+- **At least one full rest day — protect it.** Recovery is part of the system, not a lapse.
+
+### Anki card rules (build understanding, not rote)
+- **Atomic** — one idea per card. Add **2–3 connected cards** per concept; never a lonely orphan (Nielsen, *Augmenting Long-term Memory*). "Making Anki cards is an act of understanding in itself."
+- **Effortful + precise** — no yes/no prompts, no verbatim textbook excerpts, no answer trivially inferable (Matuschak, *How to write good prompts*: "You shouldn't be able to trivially infer the answer").
+- **Card the INSIGHT/turning point** of a proof or algorithm, not the full text. (e.g. for √2 irrational: "What do you assume for contradiction?" / "What parity fact gives the contradiction?")
+- **Attribute uncertain claims** ("Which result says X?") rather than asserting them.
+- **One big deck** to force cross-domain connections; build the cards yourself.
+
+### Error-log columns
+`problem link | archetype/pattern | insight I missed | bug I made | re-solve date (1–2 wks out) | re-solved? (blank-file)`
+Log the **archetype and missed insight**, not the literal solution — storing solutions like vocabulary is the "memorization trap." Make an Anki card for the missed insight, never the code.
+
+### A note on the SRS economy
+Spacing should **adapt** to performance (expand on success, shrink on failure). In hierarchical math, hard composite problems give "implicit trickle-down" reps of their sub-skills, so a few well-chosen hard problems discharge many smaller due reviews (Skycak's Fractional Implicit Repetition). Prefer harder composite problems to economize review time.
+
+---
+
+## 3. The Competitive-Programmer Regimen
+
+What the god-tier people *actually* did. The honest headline: **the dominant variable is problem VOLUME engaged deeply, not algorithm-collecting** — but with strict rules about difficulty and feedback.
+
+### The volume reality
+- **E869120 (Masataka Yoneda)**, grandmaster: "The most secure way to reach 2400 is *Solve 4000 problems*. I solved more than 4000." Lore (which he repeats) holds **tourist solved 10,000+** problems (CF blog 66909).
+- **Time-to-red is ~3 years**: community data puts mean ≈ 1160 days, median ≈ 1055 days, non-linear with plateaus and frequent quitting (CF blog 88185).
+
+### SOLVE vs FAST — two separate skills
+**Um_nik:** "In archives you learn how to solve problems, in contests you learn how to do it fast" (CF blog 98806). Split your week deliberately: untimed deep archive work builds SOLVE; rated + virtual contests build FAST. Contests alone *cap you* — a Specialist with 1341+ solved problems and "no improvement at all" was told by Um_nik that building a regime from contests alone "is a source of frustration"; you must mine archives for classic techniques first (CF topic 81100).
+
+### The difficulty band (non-negotiable)
+Practice in **[your_rating, your_rating + 200]**. Amit Maity (Specialist in 10 months): "X+200 rated 1 question >> X rated 5 problems." Too-easy teaches nothing; too-hard you can't crack.
+
+### The upsolving loop (the core drill)
+1. Do a **timed virtual contest** at your level (E869120: pick 4–5 problems near your rating, 2-hour clock, via vjudge/CF virtual).
+2. List the problems you couldn't solve.
+3. **Upsolve them yourself before reading anything** — but only the next **1–2** past your finish line (Errichto: "not all of them, just one-two more… don't try something very hard").
+4. Only then read the editorial; **re-implement from understanding, never copy.**
+5. Write **one sentence on WHY you missed it** (knowledge gap vs execution bug vs wrong direction). *That note is your feedback signal.*
+
+### The editorial timer (the permissive mainstream)
+Um_nik's strict school says "you don't read the editorial" (use an editorial-free archive — Timus/UVa/SPOJ — so you can't cheat; shelve unsolved problems for a month). Most coaches gate it on a **stuck-timer** instead: Errichto — read after **20–30 min stuck** (an hour for hard problems), define "stuck" as *out of ideas* not *unfinished*. E869120's scaling table: 600pt/R2000 → 40 min, 700/R2200 → 50 min, 800/R2400 → 60 min.
+
+### Topic-drill then return to random
+When weak at a tag, drill ~20–50 easy-to-mid problems on *just that tag*, then resume mixed practice so you regain pattern-recognition rather than over-specializing (Errichto; E869120).
+
+### Learning a NEW algorithm (Petr's method)
+Don't study it cold. **Find a problem that requires it and learn the algorithm while solving that problem**, keeping CLRS / *Concrete Mathematics* open only as a lookup (Petr Mitrichev).
+
+### Infrastructure & onramp
+- **Build a template library** (segment tree, lazy segtree, modint, FFT, geometry) so implementation speed isn't the bottleneck (E869120).
+- **Beginners start on AtCoder, not Codeforces** (clean statements, scaling difficulty, editorials). Clear the **CSES Problem Set** / follow **USACO Guide** modules and AtCoder Beginner Contest B/C/D before grinding rated CF.
+
+### The structure that produced champions
+Daily contest-then-lecture/editorial blocks. Petr improved most at Russian IOI camps: a **5-hour contest (9 AM–2 PM) + 4-hour lectures (3–7 PM), daily**, twice a year — and "learned the most from the contests." tourist spent up to **half a day** practicing as a kid. matthew99a spent "nearly whole days," up to **several days on a single hard problem.**
+
+---
+
+## 4. The Scientist / Researcher Mindset
+
+How mathematicians and research scientists learn deeply — the leap past coursework habits.
+
+### Derive, don't memorize — "What I cannot create I do not understand"
+Feynman's last blackboard. The single best test of understanding is whether you can **re-create it from scratch**. Close the book, re-derive the key theorem on a blank page; wherever you stall is your study target. Re-reading notes feels like learning but is passive recognition (Bradley, math3ma: "To fully understand a piece of mathematics, you have to grapple with it").
+
+### Hold many mental models of the same object
+Real understanding is **3–7 genuinely different views**, not one definition. Thurston lists seven ways to think about the derivative (infinitesimal, symbolic, ε-δ, geometric slope, rate of change, best linear approximation, microscopic). If you have only one model, you don't understand it yet (*On Proof and Progress*, 1994).
+
+### Rigor upgrades intuition — it doesn't replace it
+Tao's three stages: **pre-rigorous** (hand-waving) → **rigorous** (precise but feel-less) → **post-rigorous** (intuition rebuilt *on top of* rigor). "The point of rigour is… to destroy bad intuition while clarifying and elevating good intuition." After you can prove a result, go back and make it feel *obvious*.
+
+### Ask deliberately "dumb" questions and answer them
+For every theorem, before moving on, generate **3–4 stress tests**: Is the hypothesis necessary? Is the converse true? What's the classical special case? What about degenerate cases? Where *exactly* is each hypothesis used? (Tao, *Ask yourself dumb questions*). The counterexample you find — or fail to find — is your verdict on whether you understood *why*, not just *that*.
+
+### Never stop at QED — Pólya's "Looking Back"
+Pólya's four steps are understand → plan → execute → **look back**; the first and last are the neglected ones. After solving: Is every hypothesis actually *used*? (an unused hypothesis means a misunderstanding or a stronger theorem hiding.) Where's the weakest link a skeptic would attack? Can I prove it a second way? What's the one idea that made it work? **This checklist IS the feedback loop when no grader exists.**
+
+### Read papers actively — thinking beats reading
+- **Three-pass method** (Keshav): skim for the big idea → grasp content without details → reconstruct in depth, challenging each assumption.
+- **Chase references outward yourself** (Kung): "Follow references from one paper to another until you know an area extremely well. Don't count on your advisor." "Thinking is more important than reading" — published work can be wrong.
+
+### What profs actually do (the social truths)
+- **Go to seminars even understanding 5%** (Vakil): "no one is anywhere near 100% (even the speaker!)." He observed the students doing the deepest work were the regular seminar-goers. The vocabulary and osmosis *are* the point.
+- **Understanding transmits in person, not via papers** (Thurston): a proof passes between specialists "in a matter of minutes" face-to-face via "gestures… pictures and diagrams… body language," but becomes a 15–20 page paper on the page. Prioritize whiteboard contact.
+- **Keep your door open** (Hamming, *You and Your Research*): closed-door workers are more productive short-term but "10 years later… don't know what problems are worth working on." Periodically ask "What are the important problems of my field — and am I working on one?"
+- **Vision precedes proof** (Atiyah): "the vision comes first… finally comes the long technical process." Make time for undirected daydreaming before formalizing.
+- **Depth is slow by design** (Tao): periodically *relearn your field* from your now-deeper vantage. Optimize for clarity, not speed.
+
+---
+
+## 5. Anecdotes Worth Internalizing
+
+1. **Karpicke & Roediger (2008).** Students learned 40 Swahili–English pairs; one group kept re-studying known pairs, another kept being tested. A week later: **~80% recall (testing) vs ~33–36% (restudy)** — yet students *predicted both methods would work equally.* → *Self-testing more than doubled retention, and you can't feel it working. Adopt it on principle, not on feel.*
+
+2. **Kornell & Bjork (2008).** Participants studied paintings to later identify *new* paintings' artists. Interleaving won decisively — yet most participants insisted blocking had helped them more, *right after a test proving the opposite.* → *Your intuition will actively lie that the easier method is better.*
+
+3. **Ericsson vs Gladwell.** Gladwell coined "10,000 hours" from Ericsson's 1993 violin study; Ericsson publicly disowned it. 10,000 was merely the *average* of the top group by age 20 — at which point they "were nowhere near masters." → *The famous number is a misquoted group average; structure of practice, not hour count, is the lever.* (A 2019 pre-registered replication found practice explained only ~26% of variance, and the *best* violinists had logged slightly *fewer* hours than the merely good — Macnamara & Maitra.)
+
+4. **Joshua Foer, coached by Ericsson.** Stuck on memorization speed (the "OK Plateau"), Foer was told to practice at speeds *fast enough to cause errors*, identify exactly which mistakes happened, and drill those specifically. He broke through and won the USA Memory Championship. → *Plateaus break by practicing at the edge where you fail, not by more reps of what you can already do.*
+
+5. **Martin Schwartz, "The Importance of Stupidity in Scientific Research."** A gifted PhD classmate quit because research "made her feel stupid." Schwartz realized he felt the same but reframed it: "I even think it's supposed to be this way," and now "actively seek[s] out new opportunities to feel stupid." → *Confusion is the normal cost of working at the frontier, not a verdict on ability.*
+
+6. **E869120, grandmaster.** Stuck at **2399 — "1 to become a red"** — before his breakthrough. His honest prescription: "I solved more than 4000 problems." He was stuck at orange for a long time because his old *method* had hit its ceiling; he broke through by grinding harder AtCoder ARC E/F problems, lifting his virtual performance from ~2100 to ~2300. → *A plateau means change the method (harder, more considered problems), not quit.*
+
+7. **Um_nik, legendary grandmaster.** Asked how to practice, answered bluntly that you can do it too "if you will solve fucking problems," and "Stop learning useless algorithms… learn how to use binary search." → *Most people under-practice solving and over-collect algorithms.*
+
+8. **Austin Tackaberry.** Refinery process engineer → six-figure SWE in **9 months and 7 days**, capping the day job at 40 hrs/week and coding evenings/weekends under a "100 days of code" streak — even while working 40 days of brutal night shifts. He showed up to his onsite on three hours of sleep, *thought he bombed* the pair-programming round, and got the offer. → *Consistency under a streak + learning the exact stack of the jobs you want beats raw hours; feeling like you failed is not evidence you did.*
+
+9. **Haseeb Qureshi**, ex-professional poker player. ~9 months after first learning to code, his first **20+ applications were all rejected**; he kept going, landed Airbnb, and negotiated a $120k offer up to ~$250k. → *Early mass rejection is expected variance, not a verdict; transferable skills and deliberate negotiation prep are real leverage.*
+
+10. **Adair Daniels.** On food stamps, working fast food/call centers, self-taught by building things he was curious about ("DnD character sheets, name generators, simple games"); first dev job at $16/hr "in a lady's garage," now six-figure UI Team Lead seven years later. → *No degree, no money, draining day job — curiosity-driven building compounds over years. "It's doable. It's hard… doesn't start glamorous."*
+
+---
+
+## 6. Anti-Patterns to Avoid (failure mode → fix)
+
+| Failure mode | Why it fails | Fix |
+|---|---|---|
+| **Mistaking fluency for mastery** ("looks familiar" on re-read) | Recognition ≠ recall (the core illusion of competence — Oakley) | Reproduce it on a blank page; judge readiness by "can I recreate it cold," never "this looks familiar" |
+| **Re-reading / highlighting as primary strategy** | Rated **LOW** utility (Dunlosky 2013) yet most popular because they *feel* productive | Convert reading into self-quizzing + spaced practice (the only two HIGH-utility methods) |
+| **Cramming (massed practice)** | Inflates retrieval strength, builds little storage strength → fast decay | Space sessions across days; trust the harder-feeling spaced sessions |
+| **Blocked problem sets (AAABBB)** | You never practice *choosing* which technique applies | Interleave even though it feels worse (Kornell-Bjork) |
+| **Trusting your judgment of what's working** | Learners reliably prefer the *less* effective method even after data disproves it | Follow the evidence, not the feeling |
+| **Tutorial hell / passively reading worked solutions** | Following along = recognition, not the ability to start from a blank file | "Escape by building more": after any tutorial, rebuild unguided with it closed; attempt-then-check |
+| **Copying solutions without struggling** | Forfeits the generation effect | Time-box genuine struggle (25–45 min) before peeking; read only enough to get unstuck, then close it and re-derive |
+| **Counting hours instead of quality** | Comfort-zone reps = "naive practice" → plateau (Ericsson's arrested development) | Track failures-at-the-edge converted to reliable skill; raise difficulty until failure rate ≈ 40–60% |
+| **No diagnostic on failures** | "I got it wrong" is not feedback | Classify *why* (missing knowledge / execution bug / wrong direction) so next session targets the real weak sub-skill |
+| **Only doing easy problems** | Brain defaults to avoiding effort; comfortable reps don't extend ability; feeds a math-anxiety avoidance loop | Allocate a fixed share above comfort level; treat skipping as a signal of the gap to close |
+| **Skipping proofs / memorizing only results** | Brittle, non-transferable knowledge | Reconstruct each key proof; note where you stall — "I'll just trust the formula" is a red flag |
+| **Trading sleep for cram hours** | Destroys the consolidation the cramming depended on; ~40% encoding deficit | Protect 7–9 hrs; sleep *after* hard study to lock it in |
+| **Decorative/cluttered diagrams** | Violates Mayer's coherence principle → cognitive overload | Keep figures meaning-bearing, aligned with the words |
+| **Believing in "learning styles"** | No empirical support (*Make It Stick*) | Match encoding to the *material* — algorithms are spatial, so draw them |
+| **Impostor/comparison spirals** | Comparing your messy struggle to others' polished output | Reframe confusion as the edge of the unknown; compare to your *past self* |
+| **Quitting one level before the click** | Breakthroughs often sit just past where people give up | Push one more unit before concluding you "can't do" it |
+
+---
+
+## 7. Motivation & Sustainability (grinding a year+ without burning out)
+
+This is a **~3-year**, multi-month-plateau endeavor (time-to-red median ≈ 1055 days). Engineer the psychology deliberately.
+
+### Build systems and identity, not goals
+"You do not rise to the level of your goals. You fall to the level of your systems" (Clear, *Atomic Habits*). Restate outcome goals as identity: *"I am someone who writes code every day."* Every action is **a vote for who you're becoming** — so each rep is reinforced even when results are absent. Track the *vote* (a streak), not the result.
+
+### Survive the Valley of Disappointment
+Progress lags effort; **most quitting happens in the valley, not because the system failed.** When motivation dips and results are invisible, don't change the system — assume you're in the valley and **keep the streak alive at a reduced floor.** Pre-commit to a **"never zero days"** minimum you can hit on your worst day.
+
+### Make the behavior tiny and tie it to emotion
+Fogg's B=MAP: behavior needs Motivation, Ability, and a Prompt to converge. Since motivation is unreliable, **lower the difficulty.** Fogg's sharpest finding: "**Emotions create habits. Not repetition.**" Anchor the habit to an existing routine and **celebrate immediately** — even a quiet internal "yes" — to feel "Shine" and bank the emotion. (Fogg's own two-push-ups-after-every-bathroom-break grew into dozens daily.)
+
+### Protect the three intrinsic-motivation needs (Self-Determination Theory)
+Sustained self-driven effort needs **autonomy** (own your method/schedule even inside an assigned goal), **competence** (set difficulty so you visibly improve), and **relatedness** (work alongside people who share the identity). Beware the **overjustification effect** — turning a loved activity into a pure paycheck task kills intrinsic drive; protect a slice that stays yours.
+
+### Tune for flow
+Flow occurs where **challenge ≈ skill** (Csikszentmihalyi). Too hard → anxiety; too easy → boredom. Tune in real time: if anxious, break the task smaller or build skill first; if bored, raise the challenge. Protect uninterrupted blocks. (This is the same edge as deliberate practice and the [rating, rating+200] band — a recurring theme.)
+
+### Optimize for consistency, not "passion"
+Grit predicts persistence — but Credé's 2017 meta-analysis (88 samples, 66,000+ people) found only the **perseverance-of-effort** component matters; "consistency of interest" barely predicts anything, and grit correlates 0.86 with conscientiousness. **Passion is mostly the residue of sustained competent practice** — don't wait to feel inspired. (Duckworth's West Point data: the cadets who survived "Beast Barracks" weren't the most talented, just the ones who refused to drop out.)
+
+### Stop rationing "willpower"
+The ego-depletion model **failed to replicate**: Hagger et al. 2016 (23 labs, N=2,141, d=0.04, null); Dang et al. 2019 (36 labs, near-zero). Don't plan your day as a self-control budget — **design the environment**: reduce friction, automate good defaults, remove temptation cues.
+
+### Sleep is the substrate, not the competitor
+Treat **7–9 hours as part of the work.** Chronic short sleep resembles accelerated cognitive aging — you cannot out-discipline a sleep deficit (Walker). Sleep *before* learning primes encoding; sleep *after* consolidates it.
+
+### Prevent burnout structurally
+Burnout is a **person–job mismatch** across six areas (workload, control, reward, community, fairness, values — Maslach), not a personal weakness. A Cochrane review of 58 RCTs found *workplace-level* fixes (workload, control, fairness) beat individual ones (mindfulness, resilience training). For a long grind: cap chronic overload, schedule real recovery between hard stretches, protect autonomy. **Watch cynicism — not just exhaustion — as the first warning sign;** depersonalization often precedes collapse.
+
+### Use external, visible accountability
+Keep a **public learning-log / TIL repo** with a daily commit streak so progress is observable, and join a study group or cohort (#100DaysOfCode-style). Public commitment + frequent updates measurably strengthens follow-through.
+
+> **One unifying thread across all seven sections:** the productive zone is always *just past your current ability* — at ~40–60% failure for deliberate practice, at challenge≈skill for flow, in the [rating, rating+200] band, at the edge where you "feel stupid." Comfort is the enemy; calibrated difficulty is the engine.
