@@ -25,7 +25,7 @@ Every entry is a stone, mortared in — a unit you can re-derive cold, not merel
 
 ## Next Candidate Move
 
-**🗿 Move #2 — "Stress the Procedure, Trust the Process"** *(in progress — BOTH versions implemented correctly ✓; next: run the corrected trace + ex 1.9–1.11)*
+**🗿 Move #2 — "Stress the Procedure, Trust the Process"** *(trace ✓ — saw the O(n) staircase vs O(1) flat column LIVE; closing rep: ex 1.9–1.11)*
 
 Procedure-vs-process landed cold ✓. Now make it physical:
 1. Cold retrieval hook: recursive process vs iterative process — guess from a blank page.
