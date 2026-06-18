@@ -88,13 +88,13 @@ Each rank keeps prior-rank skills warm daily (the conservatory rule), so the Flo
 
 ---
 
-### RANK 0 — THE INITIATION · *SICP* (optional-but-recommended · time-boxed ~4–6 weeks)
+### RANK 0 — THE INITIATION · *SICP* (GRADED PREREQUISITE · ~4–6 wk · full audited path → `council/sicp-path.md`)
 
 *Run this alongside starting your first proofs — it is the orientation, not a wall to clear first.*
 
-Before the climb, you sit at the feet of the tradition that defines what "understanding a program" even means. **Watch the original 1986 MIT lectures** (Abelson & Sussman), and work **Structure and Interpretation of Computer Programs, Chapters 1–2**, finishing with the **metacircular evaluator, §4.1** — building a Lisp interpreter in Lisp, the moment the apprentice first sees that the evaluator is just another program. This rank exists to install the mindset (abstraction, recursion, the procedure-as-data idea, derive-don't-memorize) before the formal machinery arrives. Time-box it to ~4–6 weeks and do not let it sprawl; it is the candle-lighting, not the cathedral.
+Before the climb, you sit at the feet of the tradition that defines what "understanding a program" even means. **Watch the original 1986 MIT lectures** (Abelson & Sussman), and work the **text and its exercises** for **SICP Chapter 1 through §3.3** — the audited *essential cut* (procedures & process shapes, data abstraction through Huffman §2.3.4, the environment model §3.2, mutable lists/queues/tables §3.3). Lectures are motivation; the **exercises are the substance** (doing > reading > watching). The **metacircular evaluator §4.1** is the optional **honors crown**, not required for the prereq. Full map, gates, env setup, and project bank: `council/sicp-path.md`. Set DrRacket to **"The Racket Language"** (`#lang sicp`), never a Teaching Language. This rank exists to install the mindset (abstraction, recursion, the procedure-as-data idea, derive-don't-memorize) before the formal machinery arrives. Time-box it to ~4–6 weeks and do not let it sprawl; it is the candle-lighting, not the cathedral.
 
-> **THE GATE OF THE FIRST LAMP** — From the metacircular evaluator alone, explain (cold) how `eval` and `apply` call each other, and extend the evaluator with one new special form of your own. *Pass = the interpreter runs and you can defend why.*
+> **THE GATE OF THE FIRST LAMP — §1.2 Orders of Growth** — cold, from a blank page: write a function as **both** a recursive process and an iterative process, derive each one's **time and space** (O(n) call-stack of deferred operations vs O(1) state variables) plus its Θ growth, and defend why. *Pass = both run, both bounds derived, unaided.* (Honors extension: extend the metacircular evaluator §4.1 with a new special form of your own.)
 
 ---
 

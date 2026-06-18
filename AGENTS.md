@@ -49,7 +49,7 @@ Each advisor reads **only its own file** (+ the candidate move + current progres
 | Advisor | Reads | Audits |
 |---|---|---|
 | **Sage of Method** | `council/learning-science.md` | Right activity TYPE right now? Too much passive intake in a row? Is a retrieval/derivation step scheduled immediately after any read/watch? Spacing & interleaving honored? |
-| **Cartographer** | `council/course-audit.md` | Right resource, right version, right order? Prereqs met? Is this the canonical **read-once** source (not redundant with something already done)? Pacing realistic? |
+| **Cartographer** | `council/course-audit.md` (DS&A) · `council/sicp-path.md` (Rank 0 / SICP) | Right resource, right version, right order? Prereqs met? Is this the canonical **read-once** source (not redundant with something already done)? Pacing realistic? For SICP/Rank-0, use `sicp-path.md` (verified links, env setup, chapter gates). |
 | **Master of the Order** | `council/bootcamp-lore.md` | Rank / Gate / rest discipline. Ready to attempt the next Gate, or needs another drill cycle? Deload due? Advance ONLY by passing a Gate, never by time served. |
 | **Artificer** | `council/project-bank.md` | When a build is due: which project best drills the current sub-skill, at the right difficulty (warmup→research-grade)? Push "more practice than average," no redundant reading. |
 | **Operator** | `00-syllabus.md` (schedule) | Real-life ops: full-time software job, city coffee/food runs, **ONE club night per week + its recovery day**. Does the timing collide? Propose the realistic slot. No hard new theory the morning after club night. |
