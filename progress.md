@@ -24,16 +24,14 @@ Every entry is a stone, mortared in — a unit you can re-derive cold, not merel
 
 ## Next Candidate Move
 
-**⏳ ISSUED 2026-06-17 — Move #1: The First Lamp** *(awaiting report)*
+**🔁 Move #1.5 — Repair the distinction** *(issued 2026-06-18, awaiting cold re-statement)*
 
-Tonight's Tower session (~6:30–7:30pm):
-1. Read §I — The Induction (in `00-syllabus.md`), once.
-2. Cold pre-write (~3 min): *what is a computational process? program vs what it does?*
-3. Watch **SICP Lecture 1A — "Overview and Introduction to Lisp"** (1986). [OCW](https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video_galleries/video-lectures/) · [Archive](https://archive.org/details/MIT_Structure_of_Computer_Programs_1986) · [YouTube](https://www.youtube.com/playlist?list=PLB63C06FAF154F047) · text: [SICP HTML](https://sarabander.github.io/sicp/)
-4. Closed-book: write 4–6 sentences — the sorcerer's-spirit metaphor + procedure vs process + one "why it matters" line.
+Lecture 1B watched; procedure-vs-process did **not** land cold (honest, no peek). Holding position — no new lectures until the distinction is re-derived.
+- Re-state cold, one sentence each: *"A procedure is ___. A process is ___."* (recipe/cooking or spell/spirit).
+- Confirm Lecture **1A** watched (the sorcerer's-spirit metaphor lives there; catch its first ~10 min if skipped).
 
-**Spacing hook:** in 3 days, re-write the procedure-vs-process distinction from memory.
-**Report back:** say *"done"* + paste/summarize your writing + honest mastery signal (*clicked cold* / *had to peek*).
+**Review card live:** `procedure vs process` → due **2026-06-19** (rung 1d, reset because it didn't land).
+**Then:** if the re-statement is clean → mortar the stone, advance to Move #2 (likely 1B substitution model + first SICP §1.1 exercises).
 
 ---
 
