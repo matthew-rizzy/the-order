@@ -19,6 +19,7 @@ Every entry is a stone, mortared in — a unit you can re-derive cold, not merel
 | Date | Item completed | Mastery signal | Gate? |
 |------|----------------|----------------|-------|
 | 2026-06-18 | Procedure vs process (SICP 1A/1B) | re-derived cold ✓ *(primed)* — 1st spaced test 06-19 | — |
+| 2026-06-18 | Process space cost: O(n) call-stack vs O(1) state (TCO) | derived via guided dialogue — confirm cold 06-19 | — |
 
 ---
 

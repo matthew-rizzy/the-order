@@ -10,6 +10,7 @@
 | Card (the true name to retrieve) | Type | Learned | Last review | Rung (days) | Next due | Last signal |
 |---|---|---|---|---|---|---|
 | **procedure vs process** (static recipe/spell · dynamic activity/spirit) — SICP 1A/1B | concept | 2026-06-18 | 2026-06-18 | 1 | **2026-06-19** | re-derived cold ✓ *(primed)* — 1st true test 06-19 |
+| **process space cost** — recursive = O(n) call-stack of deferred operations · iterative = O(1) state vars · TCO is what collapses it | concept | 2026-06-18 | 2026-06-18 | 1 | **2026-06-19** | derived via guided dialogue — needs cold confirm |
 
 <!-- Keep rows sorted by Next due (soonest first). Use real dates computed with `date`, never guessed.
 First card will be: "procedure vs process (SICP 1A)" — added when Move #1 is reported done, next_due = completion + 3d. -->
