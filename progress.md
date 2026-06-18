@@ -18,20 +18,22 @@ Every entry is a stone, mortared in — a unit you can re-derive cold, not merel
 
 | Date | Item completed | Mastery signal | Gate? |
 |------|----------------|----------------|-------|
-| —    | —              | —              | —     |
+| 2026-06-18 | Procedure vs process (SICP 1A/1B) | re-derived cold ✓ *(primed)* — 1st spaced test 06-19 | — |
 
 ---
 
 ## Next Candidate Move
 
-**🔁 Move #1.5 — Repair the distinction** *(issued 2026-06-18, awaiting cold re-statement)*
+**🗿 Move #2 — "Stress the Procedure, Trust the Process"** *(issued 2026-06-18 · SICP §1.2.1, awaiting report)*
 
-Lecture 1B watched; procedure-vs-process did **not** land cold (honest, no peek). Holding position — no new lectures until the distinction is re-derived.
-- Re-state cold, one sentence each: *"A procedure is ___. A process is ___."* (recipe/cooking or spell/spirit).
-- Confirm Lecture **1A** watched (the sorcerer's-spirit metaphor lives there; catch its first ~10 min if skipped).
+Procedure-vs-process landed cold ✓. Now make it physical:
+1. Cold retrieval hook: recursive process vs iterative process — guess from a blank page.
+2. **Predict first** (Sage): which `factorial` balloons, which stays flat, and why?
+3. Scheme: **DrRacket** + `#lang sicp` ([download](https://download.racket-lang.org/)); fallback [try.scheme.org](https://try.scheme.org).
+4. Write `factorial` two ways (recursive process / iterative process); hand-trace both via the substitution model; watch the shapes.
+5. Check vs prediction (look-back). Then **SICP ex. 1.9–1.11** ([§1.2.1](https://sarabander.github.io/sicp/html/1_002e2.xhtml)).
 
-**Review card live:** `procedure vs process` → due **2026-06-19** (rung 1d, reset because it didn't land).
-**Then:** if the re-statement is clean → mortar the stone, advance to Move #2 (likely 1B substitution model + first SICP §1.1 exercises).
+**Report back:** *"done"* + which ballooned + one-line why + signal (*cold*/*peek*). Likely new cards: recursive-vs-iterative process; shape of a process.
 
 ---
 
