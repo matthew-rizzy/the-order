@@ -25,16 +25,25 @@ Every entry is a stone, mortared in — a unit you can re-derive cold, not merel
 
 ## Next Candidate Move
 
-**🗿 Move #2 — "Stress the Procedure, Trust the Process"** *(trace ✓ — saw the O(n) staircase vs O(1) flat column LIVE; closing rep: ex 1.9–1.11)*
+**🔮 Move #2a — "The First Tolling of the Clock"** *(Review Gate fired 06-19; both 1d cards due — issued Fri club night, retrieval-only)*
 
-Procedure-vs-process landed cold ✓. Now make it physical:
-1. Cold retrieval hook: recursive process vs iterative process — guess from a blank page.
-2. **Predict first** (Sage): which `factorial` balloons, which stays flat, and why?
-3. Scheme: **DrRacket** + `#lang sicp` ([download](https://download.racket-lang.org/)); fallback [try.scheme.org](https://try.scheme.org).
-4. Write `factorial` two ways (recursive process / iterative process); hand-trace both via the substitution model; watch the shapes.
-5. Check vs prediction (look-back). Then **SICP ex. 1.9–1.11** ([§1.2.1](https://sarabander.github.io/sicp/html/1_002e2.xhtml)).
+Two due cards, cold blank-page retrieval, ~6 min, no code (club-night rest discipline — Master's veto on a peak block):
+1. **Procedure vs. process** — what each *is*, in own words, and why the distinction matters.
+2. **Cost of a shape** — recursive process vs. iterative process: space cost of each + *why*, then name the mechanism that collapses the expensive one (and what it does). *(SEALED — answer not stated here.)*
 
-**Report back:** *"done"* + which ballooned + one-line why + signal (*cold*/*peek*). Likely new cards: recursive-vs-iterative process; shape of a process.
+**Report back:** for **each** card — the answer + signal (*cold* / *hesitant* / *peeked*). That recall reschedules each card on the Clock and decides Move #2b.
+
+---
+
+**🗿 Move #2b — "Stress the Procedure, Trust the Process"** *(parked → next weekday peak, ~Mon 06-22. Gated on 2a landing clean.)*
+
+Re-scoped by the Cartographer (1.9 = §1.2.1 closer; 1.11 = bridge into §1.2.2; **1.10 parked** for §1.2.3 orders-of-growth):
+1. Scheme: **DrRacket** + `#lang sicp` ([download](https://download.racket-lang.org/)); fallback [try.scheme.org](https://try.scheme.org).
+2. **Predict first** (Sage): which `factorial` balloons, which stays flat, and why? *(SEALED.)*
+3. Write `factorial` two ways; hand-trace both via the substitution model; watch the shapes. Check vs prediction.
+4. **SICP ex. 1.9** ([§1.2.1](https://sarabander.github.io/sicp/html/1_002e1.xhtml)) — trace-only, show one `add` is recursive, one iterative. Then **ex. 1.11** ([§1.2.2](https://sarabander.github.io/sicp/html/1_002e2.xhtml)) — write it recursive *and* iterative (the tree-recursion bridge).
+
+**On the horizon (not yet):** the **Gate of the First Lamp** — §1.2 Orders of Growth, cold from a blank page. Attemptable only after 2b lands clean. Likely new cards: recursive-vs-iterative process; shape of a process.
 
 ---
 
